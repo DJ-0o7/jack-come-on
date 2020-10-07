@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/email/send2}">
+    <teble>
+        <tr>简单邮箱发送</tr><br>
+        <tr>
+            <td>发送者：<input type="text" name="sender"></td><br>
+        </tr>
+        <tr>
+            <td>接收者：<input type="text" name="receiver"></td><br>
+        </tr>
+        <tr>
+            <td>内&nbsp;&nbsp;&nbsp;容：<input type="text" name="context"></td></td><br>
+        </tr>
+        <tr>
+            <input type="submit" value="发送"></td></td><br>
+        </tr>
+    </teble>
+</form>
+</body>
+</html>
