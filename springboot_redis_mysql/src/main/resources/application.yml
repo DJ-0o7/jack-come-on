@@ -1,0 +1,26 @@
+spring:
+  # 数据库配置----------------
+  datasource:
+    username: root
+    password: HDJ13878751682
+    url: jdbc:mysql://localhost:3306/ssm?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  # Redis配置----------------
+  redis:
+    # redis数据库索引
+    database: 0
+    # 要连接的主机ip
+    host: 192.168.159.135
+    #连接密码
+    password: 123456
+    # port连接的端口
+    port: 6379
+    #连接池
+    jedis:
+      pool:
+        max-active: 5 #最大连接数（负数表示没有限制）
+        min-idle: 0   #最小空闲连接
+        max-idle: 5   #最大空闲连接
+        max-wait: -1  #最大阻塞等待时间（负数表示没有限制）
+    timeout: 6000     #连接超时时间（毫秒）
