@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    username: root
+    password: 
+    url: jdbc:mysql://localhost/ssm
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
