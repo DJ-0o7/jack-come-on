@@ -1,0 +1,13 @@
+spring:
+  #配置rabbitMq服务器
+  rabbitmq:
+    host:  #主机ip
+    port: 5672  #端口
+    username: guest
+    password: guest
+
+    #消息确认配置
+    #确认消息已发送到交换机
+    publisher-confirm-type: correlated
+    #确认消息已发送到队列
+    publisher-returns: true
