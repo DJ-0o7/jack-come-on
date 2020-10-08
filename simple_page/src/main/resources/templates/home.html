@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>人员信息</title>
+    <style>
+        table{ width: 300px;}
+
+        div{ width: 300px;height: 500px;margin: 0 auto;}
+    </style>
+</head>
+<body>
+    <div>
+        <table border="1" cellspacing="0" cellpadding="0">
+            <tr>
+                <th>ID</th>
+                <th>姓名</th>
+                <th>年龄</th>
+            </tr>
+            <tr th:if="${accounts != null}" th:each="account:${accounts}">
+                <td th:text="${account.getId()}"></td>
+                <td th:text="${account.getName()}"></td>
+                <td th:text="${account.getMoney()}"></td>
+            </tr>
+        </table>
+
+<!--        <span><a th:href="@{/queryAccounts(pageNum=1)}">首页</a></span>-->
+<!--        <span th:switch="${currentPage}">-->
+<!--            <a th:case="1" th:href="@{/queryAccounts(pageNum=1)}">上一页</a>-->
+<!--            <a th:case="*" th:href="@{/queryAccounts(pageNum=${currentPage} + (-1))}">上一页</a>-->
+<!--        </span>-->
+<!--        <span th:switch="${currentPage}">-->
+<!--            <a th:case="pageCount" th:href="@{/queryAccounts(pageNum=${pageCount})}">下一页</a>-->
+<!--            <a th:case="*" th:href="@{/queryAccounts(pageNum=${currentPage}+1)}">下一页</a>-->
+<!--        </span>-->
+<!--        <span><a th:href="@{/queryAccounts(pageNum=${pageCount})}">尾页</a></span>-->
+        <span><a th:href="@{/queryAccounts(pageNum=1)}">首页</a></span>
+        <span th:switch="${currentPage}">
+            <a th:case="1" th:href="@{/queryAccounts(pageNum=1)}">上一页</a>
+            <a th:case="*" th:href="@{/queryAccounts(pageNum=${currentPage - 1})}">上一页</a>
+        </span>
+        <span th:switch="${currentPage}">
+            <a th:case="pageCount" th:href="@{/queryAccounts(pageNum=${pageCount})}">下一页</a>
+            <a th:case="*" th:href="@{/queryAccounts(pageNum=${currentPage + 1})}">下一页</a>
+        </span>
+        <span><a th:href="@{/queryAccounts(pageNum=${pageCount})}">尾页</a></span>
+    </div>
+
+</body>
+</html>
