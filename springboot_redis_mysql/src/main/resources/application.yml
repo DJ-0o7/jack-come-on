@@ -2,7 +2,7 @@ spring:
   # 数据库配置----------------
   datasource:
     username: root
-    password: HDJ13878751682
+    password: 
     url: jdbc:mysql://localhost:3306/ssm?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
@@ -11,7 +11,7 @@ spring:
     # redis数据库索引
     database: 0
     # 要连接的主机ip
-    host: 192.168.159.135
+    host: 
     #连接密码
     password: 123456
     # port连接的端口
