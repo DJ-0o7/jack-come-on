@@ -1,7 +1,0 @@
-spring:
-  datasource:
-    username: root
-    password: HDJ13878751682
-    url: jdbc:mysql://localhost/ssm
-    driver-class-name: com.mysql.jdbc.Driver
-    type: com.alibaba.druid.pool.DruidDataSource
